@@ -1,0 +1,288 @@
+[11-Feb-2016 07:17:55 UTC] PHP Fatal error:  Declaration of Injector::instantiate() must be compatible with that of IInjector::instantiate() in /web/www/php-di/internal-injector.php on line 8
+[11-Feb-2016 07:17:55 UTC] PHP Stack trace:
+[11-Feb-2016 07:17:55 UTC] PHP   1. {main}() /web/www/php-di/test.php:0
+[11-Feb-2016 07:17:55 UTC] PHP   2. require() /web/www/php-di/test.php:2
+[11-Feb-2016 07:17:55 UTC] PHP   3. require_once() /web/www/php-di/di.php:3
+[11-Feb-2016 07:17:55 UTC] PHP   4. require_once() /web/www/php-di/injector.php:2
+[11-Feb-2016 07:18:23 UTC] PHP Fatal error:  Cannot redeclare class Injector in /web/www/php-di/injector.php on line 12
+[11-Feb-2016 07:18:23 UTC] PHP Stack trace:
+[11-Feb-2016 07:18:23 UTC] PHP   1. {main}() /web/www/php-di/test.php:0
+[11-Feb-2016 07:18:23 UTC] PHP   2. require() /web/www/php-di/test.php:2
+[11-Feb-2016 07:18:23 UTC] PHP   3. require_once() /web/www/php-di/di.php:3
+[11-Feb-2016 07:18:30 UTC] PHP Fatal error:  Declaration of Injector::instantiate() must be compatible with that of IInjector::instantiate() in /web/www/php-di/injector.php on line 12
+[11-Feb-2016 07:18:30 UTC] PHP Stack trace:
+[11-Feb-2016 07:18:30 UTC] PHP   1. {main}() /web/www/php-di/test.php:0
+[11-Feb-2016 07:18:30 UTC] PHP   2. require() /web/www/php-di/test.php:2
+[11-Feb-2016 07:18:31 UTC] PHP   3. require_once() /web/www/php-di/di.php:3
+[11-Feb-2016 07:18:50 UTC] PHP Fatal error:  Declaration of DependencyInjector::module() must be compatible with that of IModuleProvider::module() in /web/www/php-di/di.php on line 5
+[11-Feb-2016 07:18:50 UTC] PHP Stack trace:
+[11-Feb-2016 07:18:50 UTC] PHP   1. {main}() /web/www/php-di/test.php:0
+[11-Feb-2016 07:18:50 UTC] PHP   2. require() /web/www/php-di/test.php:2
+[11-Feb-2016 07:19:00 UTC] PHP Notice:  Undefined index: Test in /web/www/php-di/di.php on line 15
+[11-Feb-2016 07:19:00 UTC] PHP Stack trace:
+[11-Feb-2016 07:19:00 UTC] PHP   1. {main}() /web/www/php-di/test.php:0
+[11-Feb-2016 07:19:00 UTC] PHP   2. DependencyInjector->module() /web/www/php-di/test.php:6
+[11-Feb-2016 07:19:00 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Module 'Test' is not available. You either misspelled the module name or forgot to load it. If you are registering a module, ensure that you specify the dependencies as the second argument' in /web/www/php-di/di.php:19
+Stack trace:
+#0 /web/www/php-di/test.php(6): DependencyInjector->module('Test', Array)
+#1 {main}
+  thrown in /web/www/php-di/di.php on line 19
+[11-Feb-2016 07:19:33 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Module 'Test' is not available. You either misspelled the module name or forgot to load it. If you are registering a module, ensure that you specify the dependencies as the second argument' in /web/www/php-di/di.php:19
+Stack trace:
+#0 /web/www/php-di/test.php(6): DependencyInjector->module('Test', Array)
+#1 {main}
+  thrown in /web/www/php-di/di.php on line 19
+[11-Feb-2016 07:20:08 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Module 'Test' is not available. You either misspelled the module name or forgot to load it. If you are registering a module, ensure that you specify the dependencies as the second argument' in /web/www/php-di/di.php:19
+Stack trace:
+#0 /web/www/php-di/test.php(6): DependencyInjector->module('Test', Array)
+#1 {main}
+  thrown in /web/www/php-di/di.php on line 19
+[11-Feb-2016 07:20:34 UTC] PHP Fatal error:  Uncaught exception 'InvalidArgumentException' with message 'Module 'Test' is not available. You either misspelled the module name or forgot to load it. If you are registering a module, ensure that you specify the dependencies as the second argument' in /web/www/php-di/di.php:19
+Stack trace:
+#0 /web/www/php-di/test.php(9): DependencyInjector->module('Test', Array)
+#1 {main}
+  thrown in /web/www/php-di/di.php on line 19
+[11-Feb-2016 07:21:00 UTC] PHP Catchable fatal error:  Argument 2 passed to InternalInjector::__construct() must be an instance of callable, instance of Closure given, called in /web/www/php-di/injector.php on line 27 and defined in /web/www/php-di/internal-injector.php on line 15
+[11-Feb-2016 07:21:00 UTC] PHP Stack trace:
+[11-Feb-2016 07:21:00 UTC] PHP   1. {main}() /web/www/php-di/test.php:0
+[11-Feb-2016 07:21:00 UTC] PHP   2. DependencyInjector->createInjector() /web/www/php-di/test.php:15
+[11-Feb-2016 07:21:00 UTC] PHP   3. Injector->__construct() /web/www/php-di/di.php:27
+[11-Feb-2016 07:21:00 UTC] PHP   4. InternalInjector->__construct() /web/www/php-di/injector.php:27
+[11-Feb-2016 15:33:21 Asia/Shanghai] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in /web/www/php-di/injector.php on line 102
+[11-Feb-2016 15:33:21 Asia/Shanghai] PHP Warning:  array_key_exists() expects parameter 2 to be array, string given in /web/www/php-di/injector.php on line 109
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Strict Standards:  Accessing static property InternalInjector::$_ref as non static in /web/www/php-di/internal-injector.php on line 54
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Notice:  Undefined property: InternalInjector::$_ref in /web/www/php-di/internal-injector.php on line 54
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Strict Standards:  Accessing static property InternalInjector::$_ref as non static in /web/www/php-di/internal-injector.php on line 60
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Notice:  Undefined property: InternalInjector::$_ref in /web/www/php-di/internal-injector.php on line 60
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Notice:  Undefined property: InternalInjector::$_ref in /web/www/php-di/internal-injector.php on line 60
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Strict Standards:  Accessing static property InternalInjector::$_ref as non static in /web/www/php-di/internal-injector.php on line 64
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Notice:  Undefined property: InternalInjector::$_ref in /web/www/php-di/internal-injector.php on line 64
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Notice:  Undefined property: InternalInjector::$_ref in /web/www/php-di/internal-injector.php on line 64
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:37:00 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider '0' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}(0)
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 0)
+#2 /web/www/php-di/injector.php(30): InternalInjector->get(0)
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): DependencyInjector->createInjector(Array)
+#12 {main} in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:37:38 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:37:38 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider '0' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}(0)
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 0)
+#2 /web/www/php-di/injector.php(30): InternalInjector->get(0)
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): DependencyInjector->createInjector(Array)
+#12 {main} in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:39:35 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:39:35 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:40:00 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:40:00 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:40:19 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:40:19 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:05 Asia/Shanghai] PHP Fatal error:  Call-time pass-by-reference has been removed in /web/www/php-di/injector.php on line 25
+[11-Feb-2016 15:41:17 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:17 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:27 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:27 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:29 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:29 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:29 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:29 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:36 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:36 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:37 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:37 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:37 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:37 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:37 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:37 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:40 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:40 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
+[11-Feb-2016 15:41:58 Asia/Shanghai] PHP Warning:  array_map(): An error occurred while invoking the map callback in /web/www/php-di/internal-injector.php on line 91
+[11-Feb-2016 15:41:58 Asia/Shanghai] PHP Fatal error:  Uncaught exception 'RuntimeException' with message 'Unknown provider 'logProvider' encountered' in /web/www/php-di/injector.php:26
+Stack trace:
+#0 [internal function]: Injector->{closure}('logProvider')
+#1 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'logProvider')
+#2 /web/www/php-di/injector.php(30): InternalInjector->get('logProvider')
+#3 [internal function]: Injector->{closure}('log')
+#4 /web/www/php-di/internal-injector.php(61): call_user_func(Object(Closure), 'log')
+#5 /web/www/php-di/internal-injector.php(90): InternalInjector->get('log')
+#6 [internal function]: InternalInjector->{closure}('log')
+#7 /web/www/php-di/internal-injector.php(91): array_map(Object(Closure), Array)
+#8 /web/www/php-di/internal-injector.php(32): InternalInjector->resolveParameters(Array, Array)
+#9 /web/www/php-di/injector.php(41): InternalInjector->invoke(Object(Closure))
+#10 /web/www/php-di/di.php(27): Injector->__construct(Object(DependencyInjector), Array)
+#11 /web/www/php-di/test.php(24): Depend in /web/www/php-di/injector.php on line 26
