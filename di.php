@@ -2,11 +2,14 @@
 require_once("module.php");
 require_once("injector.php");
 
+require_once("lib/controller.php");
+
 class DependencyInjector implements IModuleProvider {
     private $_modules = array();
     
     public function __construct() {
-        
+        $di = $this->module("di", array());
+        $di->provider("controller", new ControllerProvider());
     }
     
     public function module($name, array $dependencies=null) {
@@ -24,6 +27,7 @@ class DependencyInjector implements IModuleProvider {
     }
     
     public function createInjector(array $modules) {
+        array_unshift($modules, "di");
         return new Injector($this, $modules);
     }
 };

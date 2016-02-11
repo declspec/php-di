@@ -1,7 +1,7 @@
 <?php
 interface IInjector {
     function invoke($expr, array $locals);
-    function instantiate(string $className, array $locals);
+    function instantiate($type, array $locals);
     function get($name);
 };
 
@@ -32,19 +32,29 @@ class InternalInjector implements IInjector {
         return call_user_func_array($expr, $this->resolveParameters($parameters, $locals));
     }
     
-    public function instantiate(string $className, array $locals=array()) {
-        if (!is_class($className))
-            throw new InvalidArgumentException("'$className' is not a valid class");
+    public function instantiate($type, array $locals=array()) {
+        $parameters = null;
         
-        $class = new ReflectionClass($className);
+        if (is_array($type)) {
+            $parameters = array_slice($type, 0, count($type)-1);
+            $type = $type[count($type)-1];
+        }
+        
+        if (!class_exists($type))
+            throw new InvalidArgumentException("'$type' is not a valid class");
+        
+        $class = new ReflectionClass($type);
         $constructor = $class->getConstructor();
         
         if ($constructor === null)
             return $class->newInstanceWithoutConstructor();
-            
-        $parameters = array_map(function($p) { 
-            return $p->name;
-        }, $constructor->getParameters());
+        
+        if ($parameters === null) {
+            // Unless explicitly annotated, get the parameter names via reflection
+            $parameters = array_map(function($p) { 
+                return $p->name;
+            }, $constructor->getParameters());
+        }
         
         return $constructor->newInstanceArgs($this->resolveParameters($parameters, $locals));
     }

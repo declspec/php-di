@@ -78,8 +78,8 @@ class Injector implements IInjector, IProvideFactory {
         return $this->_instanceInjector->invoke($expr, $locals);   
     }
     
-    public function instantiate(string $className, array $locals=array()) {
-        return $this->_instanceInjector->instantiate($className, $locals);    
+    public function instantiate($type, array $locals=array()) {
+        return $this->_instanceInjector->instantiate($type, $locals);    
     }
     
     public function get($name) {
