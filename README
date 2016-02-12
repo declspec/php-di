@@ -20,6 +20,10 @@ $main = $dm->module("main", array());
 // create some constants and a basic logger function
 $main->constant("ApplicationName", "php-di");
 
+// A factory is a lot more flexible than the 'service' alternative.
+// 'service' is useful when you want to instantiate a class as a singleton,
+// whereas factory allows you to return what object you like as the 'service',
+// be it a class instance, closure, string or even NULL.
 $main->factory("log", function($ApplicationName) {
 	// A 'factory' returns the singleton that should be created as the 'log' instance.
     // in this case, a function which accepts a single parameter and echos it out along with
@@ -40,6 +44,4 @@ $main->run(function($log) {
 
 // Calling 'createInjector' loads all the modules and returns an injector instance.
 $dm->createInjector(array("main"));
-
-?>
 ```
