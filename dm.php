@@ -2,13 +2,16 @@
 require_once(__DIR__ . "/injector.php");
 require_once(__DIR__ . "/factory.php");
 require_once(__DIR__ . "/module.php");
+require_once(__DIR__ . "/lib/controller.php");
 
 class DependencyManager {
     private $_modules = array();
     
     public function __construct() {
         // Create the core 'di' module
-        $di = $this->module("di", array());   
+        $di = $this->module("di", array());
+        
+        $di->provider("controller", new ControllerProvider());
     }
     
     public function module($name, array $dependencies=null) {
