@@ -56,7 +56,7 @@ class Module implements IModule {
     }
     
     public function constant($name, $value) {
-        array_unshift($this->_invokeQueue, array("provide", "constant", array($name, $className)));   
+        array_unshift($this->_invokeQueue, array("provide", "constant", array($name, $value)));   
         return $this;
     }
     
