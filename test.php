@@ -1,7 +1,7 @@
 <?php
-require("di.php");
+require("dm.php");
 
-$di = new DependencyInjector();
+$di = new DependencyManager();
 
 $m1 = $di->module("module1", array());
 
@@ -22,4 +22,9 @@ $m2->run(function($log) {
 
 $injector = $di->createInjector(array("module2"));
 
+function xfoo() {
+    echo "bar";   
+}
+
+var_dump(xfoo());
 ?>

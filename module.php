@@ -1,11 +1,7 @@
 <?php
-interface IModuleProvider {
-    function module($module, array $dependencies);
-};
-
 interface IModule {
     function provider($name, $provider);
-    function factory($name, $factory, $enforceReturn);
+    function factory($name, $factory);
     function service($name, $className);
     function constant($name, $value);
     function controller($name, $className);
@@ -49,8 +45,8 @@ class Module implements IModule {
         return $this;
     }
     
-    public function factory($name, $factory, $enforceReturn=true) {
-        $this->_invokeQueue[] = array("provide", "factory", array($name, $factory, $enforceReturn));
+    public function factory($name, $factory) {
+        $this->_invokeQueue[] = array("provide", "factory", array($name, $factory));
         return $this;
     }
     
