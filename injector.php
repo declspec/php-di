@@ -57,7 +57,7 @@ class Injector implements IInjector {
             }, $constructor->getParameters());
         }
         
-        return $constructor->newInstanceArgs($this->resolveParameters($parameters, $locals));
+        return $class->newInstanceArgs($this->resolveParameters($parameters, $locals));
     }
     
     public function get($serviceName) {

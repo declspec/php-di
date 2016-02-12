@@ -42,7 +42,7 @@ class DependencyFactory {
             return $injector->instantiate($className);
         });
         
-        return $this->factory($name, $serviceProvider);   
+        return $this->provider($name, $serviceProvider);   
     }
     
     public function constant($name, $value) {

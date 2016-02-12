@@ -47,7 +47,7 @@ class DependencyManager {
             $invokable = property_exists($provider, "_get")
                 ? $provider->_get
                 : array($provider, "_get");
-            
+
             return $injector->invoke($invokable);    
         });
         
