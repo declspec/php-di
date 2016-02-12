@@ -1,4 +1,4 @@
-php-di: A PHP dependency manager
+php-di: A PHP dependency injector
 ====================
 
 The library is based heavily on the AngularJS dependency injector infrastructure and should be familiar
