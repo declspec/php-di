@@ -4,8 +4,8 @@ class ControllerProvider {
     
     private $_controllers = array();
     
-    public function register($name, $constructor) {
-        $this->_controllers[$name] = $constructor;   
+    public function register($name, $constructor = null) {
+        $this->_controllers[$name] = $constructor === null ? $name : $constructor;  
     }
     
     public function resolve($name, $throwOnError=true) {

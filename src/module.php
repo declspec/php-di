@@ -50,7 +50,7 @@ class Module implements IModule {
         return $this;
     }
     
-    public function service($name, $className) {
+    public function service($name, $className=null) {
         $this->_invokeQueue[] = array("provide", "service", array($name, $className));
         return $this;
     }

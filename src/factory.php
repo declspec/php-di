@@ -37,6 +37,9 @@ class DependencyFactory {
     }
     
     public function service($name, $className) {
+        if ($className === null)
+            $className = $name;
+            
         $serviceProvider = new stdClass();
         $serviceProvider->_get = array("injector", function($injector) use(&$className) {
             return $injector->instantiate($className);
