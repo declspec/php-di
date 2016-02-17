@@ -1,10 +1,10 @@
 <?php
 class ControllerProvider {
-    const CONTROLLER_REGEXP = '/^(\S+)%/';
+    const CONTROLLER_REGEXP = '/^(\S+)$/';
     
     private $_controllers = array();
     
-    public function register($name, $constructor = null) {
+    public function register($name, $constructor) {
         $this->_controllers[$name] = $constructor === null ? $name : $constructor;  
     }
     
