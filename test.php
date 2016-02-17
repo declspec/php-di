@@ -1,6 +1,12 @@
 <?php
 require("dm.php");
 
+class Logger {
+    public function log($obj) {
+       
+    }  
+};
+
 $di = new DependencyManager();
 
 $m1 = $di->module("module1", array());

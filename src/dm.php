@@ -1,8 +1,8 @@
 <?php
-require_once(__DIR__ . "/injector.php");
-require_once(__DIR__ . "/factory.php");
-require_once(__DIR__ . "/module.php");
-require_once(__DIR__ . "/lib/controller.php");
+require_once(__DIR__ . '/injector.php');
+require_once(__DIR__ . '/factory.php');
+require_once(__DIR__ . '/module.php');
+require_once(__DIR__ . '/lib/controller.php');
 
 class DependencyManager {
     private $_modules = array();

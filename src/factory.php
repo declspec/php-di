@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/injector.php");
+require_once(__DIR__ . '/injector.php');
 
 interface IDependencyFactory {
     function provider($name, $provider);
