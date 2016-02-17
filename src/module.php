@@ -60,8 +60,8 @@ class Module implements IModule {
         return $this;
     }
     
-    public function controller($name, $className) {
-        $this->_invokeQueue[] = array("controller", "register", array($name, $className));
+    public function controller($name, $className=null) {
+        $this->_invokeQueue[] = array("controllerProvider", "register", array($name, $className));
         return $this;   
     }
 };
