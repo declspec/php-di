@@ -6,8 +6,11 @@ require_once(__DIR__ . '/lib/controller.php');
 
 class DependencyManager {
     private $_modules = array();
+    private $_moduleResolver;
     
-    public function __construct() {
+    public function __construct(callable $moduleResolver=null) {
+        $this->_moduleResolver = $moduleResolver;
+        
         // Create the core 'di' module
         $di = $this->module("di", array());
         
@@ -21,6 +24,13 @@ class DependencyManager {
             return $this->_modules[$name];
             
         if ($dependencies === null) {
+            if ($this->_moduleResolver !== null) {
+                // Attempt to use the module resolver
+                call_user_func($this->_moduleResolver, $name, $this);
+                if (isset($this->_modules[$name]))
+                    return $this->_modules[$name];
+            }
+        
             throw new InvalidArgumentException("Module '$name' is not available. You either misspelled the module name or forgot to load it. " .
                 "If you are registering a module, ensure that you specify the dependencies as the second argument");   
         }
